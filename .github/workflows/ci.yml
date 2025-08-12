@@ -49,9 +49,11 @@ jobs:
           git add chart/values.yaml
           git commit -m "ci: update Helm image -> $repo:$tag" || echo "no changes to commit"
       - name: Push changes back
+        env:
+          REPO_PAT: ${{ secrets.REPO_PAT }}
         run: |
-          if [ -n "${{ secrets.REPO_PAT }}" ]; then
-            git push https://x-access-token:${{ secrets.REPO_PAT }}@github.com/${{ github.repository }} HEAD:main
+          if [ -n "$REPO_PAT" ]; then
+            git push https://x-access-token:$REPO_PAT@github.com/${{ github.repository }} HEAD:main
           else
             git push origin HEAD:main
           fi

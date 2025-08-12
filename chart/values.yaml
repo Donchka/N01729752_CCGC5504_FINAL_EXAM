@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: donchka/nginx-n01729752
-  tag: "v0.0.1"
+  tag: "latest"
 
 service:
   type: ClusterIP

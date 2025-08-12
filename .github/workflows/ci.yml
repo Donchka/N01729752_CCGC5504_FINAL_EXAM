@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 env:
-  STUDENT_ID: N01729752
+  STUDENT_ID: n01729752
 
 jobs:
   build-and-publish:

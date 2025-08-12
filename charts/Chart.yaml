@@ -1,0 +1,5 @@
+apiVersion: v2
+name: nginx-ccgc-final
+description: Example nginx web app for final
+version: 0.1.0
+appVersion: "1.0"
